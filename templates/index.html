@@ -1,7 +1,11 @@
-{% extends 'application.html' %}
-{% block head %}ToDo app{% endblock %}
-{% block body %}
-    <h1>Bem-vindo ao ToDo</h1>
+{% extends "application.html" %}
+
+{% block html_attribs %} lang="pt-BR" {% endblock %}
+
+{% block title %}ToDo app{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="text-center text-info">Bem-vindo ao ToDo</h1>
+</div>
 {% endblock %}
-
-
