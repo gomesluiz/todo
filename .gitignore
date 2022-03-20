@@ -1,5 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 
-# Virtual environment
+# Virtual environment.
 ./venv/
+
+# Backup files.
+*.*~
