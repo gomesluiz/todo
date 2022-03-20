@@ -31,7 +31,7 @@ class Task(db.Model):
     description = db.Column(db.String(200), nullable=False)
     """:type : str"""
 
-    data_created = db.Column(db.DateTime, default=datetime.utcnow)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)
     """:type : datetime"""
 
     def __repr__(self):
@@ -45,7 +45,7 @@ class Task(db.Model):
 def index():
     """root route"""
     if request.method == 'POST':
-        task = Task(request.form['description'])
+        task = Task(description=request.form['description'])
         try:
             db.session.add(task)
             db.session.commit()
@@ -53,7 +53,7 @@ def index():
         except:
             return "Houve um erro, ao inserir a tarefa"
     else:
-        tasks = Task.query.order_by(Task.data_created).all()
+        tasks = Task.query.order_by(Task.date_created).all()
         return render_template('index.html', tasks=tasks)
 
 
@@ -70,7 +70,7 @@ def delete(id):
 
 
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
-def update():
+def update(id):
     """update route"""
     task = Task.query.get_or_404(id)
     if request.method == 'POST':
