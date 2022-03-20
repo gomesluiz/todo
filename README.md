@@ -1,10 +1,10 @@
 # ToDO
 
-ToDo is a simple task manager which has coded in Python and Flask.
+ToDo is a simple task manager coded in Python and Flask.
 
 ## Installation
 
-Clone the source application from this repository.
+Clone the source code from this repository.
 
 ```bash
 git clone https://github.com/gomesluiz/todo.git
@@ -33,7 +33,7 @@ setup.bat
 flask run
 ```
 
-Finally, access the address [http://localhost:5000](http://localhost:5000) in your browser to 
+Finally, access the address http://localhost:5000 in your browser to manage your duties ;-)
  
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
