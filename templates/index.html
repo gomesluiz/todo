@@ -5,6 +5,7 @@
 {% block title %}Index{% endblock %}
 
 {% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
 <div class="container">
    <div class="page-header">
       <h1 class="text-center text-primary">ToDo: Never forget your duties</h1>
@@ -22,9 +23,9 @@
          <tbody>
             {% for task in tasks %}
             <tr>
-               <td>{{ task.description }}</td>
-               <td>{{ task.date_created.date() }}</td>
-               <td>
+               <td class="align-middle">{{ task.description }}</td>
+               <td class="align-middle">{{ task.date_created.date() }}</td>
+               <td class="align-middle actions">
                   <a class="btn btn-success" href="/update/{{task.id}}">Update</a> |
                   <a class="btn btn-danger" href="/delete/{{task.id}}">Delete</a>
                </td>
