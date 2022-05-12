@@ -33,7 +33,7 @@ class Task(db.Model):
 
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
     """:type : datetime"""
-
+ 
     def __repr__(self):
         """override __repr__ method"""
         return f"Task: #{self.id}, content: {self.description}"

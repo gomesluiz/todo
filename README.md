@@ -22,6 +22,8 @@ chmod +x setup.sh
 ```
 
 #### Windows
+Para o Windows executar manualmente cada linha do arquivo .bat.
+
 ```bash
 cd todo
 setup.bat
